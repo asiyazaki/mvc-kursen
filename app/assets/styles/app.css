@@ -1,0 +1,140 @@
+body {
+    background-color: lightgray;
+    margin: 0 auto;
+    background-color: rgb(242, 215, 244);
+}
+
+main {
+    margin: 0 auto;
+    padding-left: 2em;
+    padding-right: 2em;
+}
+
+.nav {
+    list-style-type: none;
+    background-color: #a16d90;
+    border-top: 4px solid #572f57;
+    text-align: center;
+    font-size: 1.2em;
+    border-bottom: 2px solid #572f57;
+}
+
+.nav a {
+    display: inline-block;
+    padding: 0.2em 0.5em;
+    color: #1d2755;
+    text-decoration: none;
+}
+
+.nav li {
+    display: inline;
+}
+
+h1 {
+    border-bottom: 4px double #ccc;
+}
+
+.site-header {
+    background-size: cover;
+    height: 100px;
+}
+
+.figure {
+    margin: 0;
+    padding: 0.5em;
+    border: 1px solid #ccc;
+    max-width: 100%;
+}
+
+.figure.right {
+    float: right;
+    margin-right: 1em;
+}
+
+.two-col-layout {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    max-width:900px;
+    margin: 0 auto;
+}
+
+.two-col-layout > .main {
+    width: calc(100% / 16 * 12);
+}
+
+.two-col-layout > .aside {
+    width: calc(100% / 20 * 4);/*16 4*/
+}
+
+.aside {
+    background-color: rgb(242, 215, 244);
+    border-right: 1px solid #ccc;
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-top: 24px;
+}
+
+.aside h4 {
+    border-bottom: 1px solid #ccc;
+}
+
+.footer {
+    background: rgb(22, 22, 22);
+    color: rgb(117, 42, 107);
+    padding: 0 1em;
+}
+
+.footer a {
+    color: rgb(117, 42, 107);
+}
+
+.footer a:hover {
+    color: lime;
+    text-decoration: none;
+}
+
+.footer .row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 24px;
+}
+
+.footer .row > .col3 {
+    width: calc(100% / 3);
+}
+
+.footer .row > .col1 {
+    width: 100%;
+}
+
+.final {
+    text-align: center;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+@media (max-width: 700px) {
+    .two-col-layout {
+        flex-wrap: wrap;
+    }
+
+    .two-col-layout > .main,
+    .two-col-layout > .aside {
+        width: 100%;
+    }
+}
+
+@media (max-width: 650px) {
+    .footer .row {
+        flex-wrap: wrap;
+    }
+
+    .footer .row > .col3 {
+        width: 100%;
+    }
+}

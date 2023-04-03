@@ -1,0 +1,31 @@
+{% extends "base.html.twig" %}
+
+{% block title %}About{% endblock %}
+
+{% block body %}
+    <div class="two-col-layout">
+        <main class="main">
+        <h1>About</h1>
+        <article class="article">
+            <header>
+                <h1>Om kursen och webbplatsen</h1>
+                <p>Den här kursen heter Objektorienterad webbteknologier där vi lär vi oss hur vi kan använda objektorienterade programmeringstekniker i PHP.
+                Kursen består av 7 inlämningar där den sista är ett projektarbete.</p>
+                <p>I kursen går vi igenom hur man kan programmera i webbmiljö, hur man kan koppla sig mot databaser.
+                Hur man kan struktuera och återanvända sin kod så att man har finare kod. Använda sig av designmönster. vi går igenom enhetstesning och SQL.
+                Kursen omfattar även hur man kan utveckla webbapplikationer i ett ramverk och vilka tekniker och vertyg som kan användas. Ramverken som vi använder i den här kursen heter Symfony.</p>
+            </header>
+
+            <figure class="figure">
+                <img src="{{ asset('img/symfony.png') }}"alt="" width="100%">
+            </figure>
+        </article>
+    </main>
+
+    <aside class="aside">
+        <h4>Github länkar</h4>
+            <li><a href="https://github.com/dbwebb-se/mvc">mvc Github</a></li>
+            <li><a href="https://github.com/asiyazaki">Min Github-repo</a></li>
+    </aside>
+</div>
+{% endblock %}

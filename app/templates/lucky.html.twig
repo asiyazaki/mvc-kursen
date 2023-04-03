@@ -1,0 +1,14 @@
+{% extends "base.html.twig" %}
+
+{% block title %}Addition{% endblock %}
+
+{% block body %}
+    <h1>Addition</h1>
+    <p>Enkla additioner för barn</p>
+    <p> {{ number1 }} + {{ number2 }} = {{ sum }}</p>
+
+    <figure class="figure">
+        <img src="{{ asset('img/addition.gif') }}" alt="" width="30%">
+    </figure>
+{% endblock %}
+

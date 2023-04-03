@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}Welcome!{% endblock %}</title>
+        <link rel="icon" href="{{ asset('img/glider.svg') }}">
+        {# Run `composer require symfony/webpack-encore-bundle` to start using Symfony UX #}
+        {% block stylesheets %}
+            {{ encore_entry_link_tags('app') }}
+        {% endblock %}
+
+        {% block javascripts %}
+            {{ encore_entry_script_tags('app') }}
+        {% endblock %}
+    </head>
+    <body>
+        <header class="site-header" style="background-image: url({{ asset('img/natur.jpg') }})"></header>
+
+        <nav class="nav">
+            <li><a href="{{ path('report') }}">Report</a></li>
+            <li><a href="{{ path('about') }}">About</a></li>
+            <li><a href="{{ path('me') }}">Me</a></li>
+            <li><a href="{{ path('lucky') }}">Lucky</a></li>
+            <li><a href="{{ path('app_mypage_quote') }}">Quote</a></li>
+        </nav>
+
+        <main>{% block body %}{% endblock %}</main>
+        <footer class="footer">{% block footer %}
+            <div class="row">
+                <div class="col3 box">
+                <h3>Min GitHub</h3>
+                    <ul>
+                        <li><a href="https://github.com/asiyazaki">Github</a></li>
+                    </ul>
+                </div>
+
+                <div class="col3 box">
+                <h3>Kursens sidor</h3>
+                    <ul>
+                        <li><a href="https://dbwebb.se/kurser/mvc-v2">Dbwebb</a></li>
+                        <li><a href="https://github.com/dbwebb-se/mvc">Github</a></li>
+                    </ul>
+                </div>
+
+                <div class="row">
+                    <div class=" col1 final">
+                        <p>Denna sidan är Copyright &copy; av Hatice Kekic.</p>
+                    </div>
+            </div>
+        {% endblock %}</footer>
+    </body>
+
+</html>
